@@ -1,0 +1,44 @@
+@use 'variaveis';
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+
+    h2 {
+        
+        font-size: 2em;
+        display: block;
+        text-decoration: underline;
+    }
+    
+    &__itens {
+        padding-top: 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 0.5%;
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr 1fr;
+            gap: 1%;
+        }
+        @media (max-width: 768px) {
+            display: block;
+            gap: 1%;
+        }
+        
+        &__item {
+            &__img {
+                width: 100%;
+                border-radius: 5px;
+                border: 6px solid variaveis.$corDeFundo;
+                transition: border-color, .5s ease;
+
+                &:hover {
+                    border-color: variaveis.$corSecundaria;
+                }
+            }
+        }
+    }
+}

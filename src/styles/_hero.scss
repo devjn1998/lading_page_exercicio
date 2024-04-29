@@ -1,0 +1,18 @@
+@use 'variaveis';
+
+
+.hero {
+  &__content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 6px solid variaveis.$corSecundaria;
+
+    &__logo {
+        width: 60%;
+
+    }
+  }
+
+}
